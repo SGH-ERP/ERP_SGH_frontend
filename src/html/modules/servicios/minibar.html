@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Reposición y Cargos de Minibar</h2>
+      <p class="card-subtitle">Todos los cargos a habitación se reflejan automáticamente en Módulo 04</p>
+    </div>
+    <button type="button" class="btn btn-teal btn-sm hidden" data-ref="new-pos-btn">Registrar nuevo en POS</button>
+  </div>
+  <div data-ref="body"></div>
+</div>
+
+<template data-tpl="fila-pedido-origen">
+  <div class="p-4 row-between">
+    <div>
+      <div class="text-xs font-bold text-navy" data-ref="title"></div>
+      <div class="text-11 text-slate-500 mt-0.5" data-ref="items"></div>
+    </div>
+    <div class="row-gap-sm">
+      <span class="font-mono font-bold text-navy" data-ref="total"></span>
+      <div data-ref="status"></div>
+      <button type="button" class="btn btn-teal btn-xs hidden" data-ref="deliver-btn">Marcar Entregado</button>
+    </div>
+  </div>
+</template>

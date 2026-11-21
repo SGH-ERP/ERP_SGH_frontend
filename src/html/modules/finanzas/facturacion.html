@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Comprobantes Emitidos (Boletas / Facturas)</h2>
+      <p class="card-subtitle">Registro de boletas, facturas y notas de crédito emitidas</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="issue-btn">
+      <span data-ref="issue-icon"></span>
+      <span>Emitir comprobante</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Serie / Número</th>
+          <th>Tipo</th>
+          <th>Cliente</th>
+          <th class="text-right">Total inc. IGV</th>
+          <th>Estado</th>
+          <th class="text-right">Acciones</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-comprobante">
+  <tr>
+    <td class="font-mono font-bold text-navy" data-ref="series-num"></td>
+    <td data-ref="type"></td>
+    <td>
+      <div class="font-medium text-navy" data-ref="customer-name"></div>
+      <div class="text-11 font-mono text-slate-500" data-ref="customer-doc"></div>
+    </td>
+    <td class="text-right font-mono font-semibold" data-ref="total"></td>
+    <td data-ref="status"></td>
+    <td class="text-right">
+      <div class="row-wrap justify-end">
+        <button type="button" class="btn btn-outline btn-xs" data-ref="preview-btn">Ver / Imprimir</button>
+        <button type="button" class="btn btn-danger-outline btn-xs hidden" data-ref="void-btn">Anular</button>
+      </div>
+    </td>
+  </tr>
+</template>

@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Gastos Operativos y Egresos</h2>
+      <p class="card-subtitle">Incluye compras recibidas de M03 y reparaciones de M02</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="new-icon"></span>
+      <span>Nuevo gasto</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Centro Costos</th>
+          <th>Proveedor / Descripción</th>
+          <th class="text-right">Importe</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-gasto">
+  <tr>
+    <td class="font-mono text-11 text-slate-500" data-ref="date"></td>
+    <td class="font-medium text-navy" data-ref="cost-center"></td>
+    <td>
+      <div class="font-medium text-navy" data-ref="supplier"></div>
+      <div class="text-11 text-slate-500" data-ref="description"></div>
+    </td>
+    <td class="text-right font-mono font-semibold" data-ref="amount"></td>
+    <td data-ref="status"></td>
+  </tr>
+</template>

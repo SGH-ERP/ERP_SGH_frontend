@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title" data-ref="title"></h2>
+      <p class="card-subtitle">Al completar una OT se imputa el costo a Finanzas (M4) y se actualiza cualquier reclamo CRM vinculado (Flujo E)</p>
+    </div>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>OT</th>
+          <th>Ubicación / Trabajo</th>
+          <th>Técnico</th>
+          <th class="text-right">Costo Est.</th>
+          <th>Estado</th>
+          <th class="text-right">Acción</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-ot">
+  <tr>
+    <td class="font-mono font-semibold text-navy" data-ref="code"></td>
+    <td>
+      <div class="font-medium text-navy" data-ref="location"></div>
+      <div class="text-11 text-slate-500" data-ref="desc"></div>
+    </td>
+    <td data-ref="staff"></td>
+    <td class="text-right font-mono" data-ref="cost"></td>
+    <td data-ref="status"></td>
+    <td class="text-right" data-ref="action"></td>
+  </tr>
+</template>

@@ -1,0 +1,62 @@
+<div class="grid-2-lg">
+  <div class="card card-pad stack-md">
+    <div>
+      <h2 class="card-title row-gap-sm">
+        <span data-ref="chat-icon"></span>
+        <span>Asistente Virtual Conversacional (Gemini AI)</span>
+      </h2>
+      <p class="card-subtitle">Vista aislada de autoservicio para el huésped sin exponer datos internos del hotel.</p>
+    </div>
+
+    <div class="crm-chat-box" data-ref="chat-box"></div>
+
+    <form class="row-wrap" data-ref="chat-form">
+      <input class="input-control flex-1" placeholder="Consulta del huésped (ej. horario desayuno, spa, late check-out)..." data-ref="chat-input" />
+      <button type="submit" class="btn btn-teal">
+        <span data-ref="send-icon"></span>
+        <span>Enviar</span>
+      </button>
+    </form>
+  </div>
+
+  <div class="card card-pad stack-md">
+    <div>
+      <h2 class="card-title">Portal de Autoservicio del Huésped</h2>
+      <p class="card-subtitle">Envío directo de solicitudes desde la habitación.</p>
+    </div>
+
+    <div>
+      <label class="field-label">Huésped</label>
+      <select class="select-control" data-ref="portal-guest"></select>
+    </div>
+
+    <div class="p-3 bg-subtle rounded-md text-xs row-between hidden" data-ref="points-box">
+      <span>Puntos disponibles:</span>
+      <strong class="font-mono text-teal" data-ref="points-value"></strong>
+    </div>
+
+    <div>
+      <label class="field-label">Tipo de solicitud</label>
+      <select class="select-control" data-ref="portal-req-type">
+        <option value="Amenities / Almohadas">Amenities / Almohadas</option>
+        <option value="Late Check-out">Late Check-out</option>
+        <option value="Traslado Aeropuerto">Traslado Aeropuerto</option>
+        <option value="Reserva Restaurante">Reserva Restaurante</option>
+        <option value="Soporte Técnico">Soporte Técnico</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="field-label">Mensaje del huésped</label>
+      <textarea rows="3" class="textarea-control" placeholder="Ej. Necesito dos almohadas hipoalergénicas adicionales en Hab. 301..." data-ref="portal-req-desc"></textarea>
+    </div>
+
+    <button type="button" class="btn btn-primary hidden" data-ref="portal-submit-btn">Enviar desde Portal del Huésped</button>
+  </div>
+</div>
+
+<template data-tpl="chat-mensaje">
+  <div class="crm-msg-row">
+    <div class="crm-msg-bubble" data-ref="bubble"></div>
+  </div>
+</template>

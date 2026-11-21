@@ -1,0 +1,42 @@
+<div class="stack-md">
+  <div class="card card-pad stack-md">
+    <h2 class="card-title">Plano de Mesas Restaurante &amp; Bar</h2>
+    <div class="rooms-grid" data-ref="tables-grid"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Comandas de Cocina y Bar</h2>
+    </div>
+    <div class="divide-list" data-ref="orders-list"></div>
+  </div>
+</div>
+
+<template data-tpl="card-mesa">
+  <div class="p-3 border rounded-md stack-xs">
+    <div class="row-between">
+      <span class="font-mono font-bold text-navy" data-ref="code-area"></span>
+      <div data-ref="status"></div>
+    </div>
+    <div class="text-11 text-slate-500" data-ref="meta"></div>
+    <select class="select-control text-xs mt-1 hidden" data-ref="status-select">
+      <option value="Libre">Libre</option>
+      <option value="Ocupada">Ocupada</option>
+      <option value="Reservada">Reservada</option>
+    </select>
+  </div>
+</template>
+
+<template data-tpl="fila-comanda-restaurante">
+  <div class="p-4 row-between">
+    <div>
+      <div class="text-xs font-bold text-navy" data-ref="title"></div>
+      <div class="text-11 text-slate-500 mt-0.5" data-ref="items"></div>
+    </div>
+    <div class="row-gap-sm">
+      <span class="font-mono font-semibold text-navy" data-ref="total"></span>
+      <div data-ref="status"></div>
+      <button type="button" class="btn btn-teal btn-xs hidden" data-ref="action-btn"></button>
+    </div>
+  </div>
+</template>

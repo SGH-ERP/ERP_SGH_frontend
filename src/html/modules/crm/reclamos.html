@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Gestión de Reclamos e Incidencias de Huéspedes (Flujo E)</h2>
+      <p class="card-subtitle">Los reclamos escalados generan automáticamente una orden en Mantenimiento (M2)</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="new-icon"></span>
+      <span>Nuevo reclamo</span>
+    </button>
+  </div>
+  <div class="divide-list" data-ref="list"></div>
+</div>
+
+<template data-tpl="fila-reclamo">
+  <div class="p-4 stack-xs">
+    <div class="row-between">
+      <div>
+        <span class="font-mono text-xs font-bold text-navy" data-ref="title"></span>
+        <div class="text-xs text-slate-700 mt-1" data-ref="description"></div>
+      </div>
+      <div class="row-gap-sm shrink-0">
+        <div data-ref="severity"></div>
+        <div data-ref="status"></div>
+      </div>
+    </div>
+    <div class="row-between pt-2">
+      <span class="text-11 text-slate-500" data-ref="meta"></span>
+      <button type="button" class="btn btn-teal btn-xs hidden" data-ref="resolve-btn">Marcar Resuelto</button>
+    </div>
+  </div>
+</template>

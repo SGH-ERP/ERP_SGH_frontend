@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Solicitudes y Requerimientos de Huéspedes</h2>
+      <p class="card-subtitle">Derivación directa a Recepción, Housekeeping, Mantenimiento o Restaurante</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="new-icon"></span>
+      <span>Nueva solicitud</span>
+    </button>
+  </div>
+  <div class="divide-list" data-ref="list"></div>
+</div>
+
+<template data-tpl="fila-solicitud">
+  <div class="p-4 row-between">
+    <div>
+      <div class="text-xs font-bold text-navy" data-ref="title"></div>
+      <div class="text-11 text-slate-600 mt-0.5" data-ref="meta"></div>
+    </div>
+    <div class="row-gap-sm">
+      <div data-ref="status"></div>
+      <button type="button" class="btn btn-teal btn-xs hidden" data-ref="attend-btn">Marcar Atendida</button>
+    </div>
+  </div>
+</template>

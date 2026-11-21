@@ -1,0 +1,37 @@
+<div class="stack-md">
+  <div class="row-between">
+    <div class="segmented" data-ref="floor-filter">
+      <button type="button" class="segmented-btn" data-floor="Todos">Todos los pisos</button>
+      <button type="button" class="segmented-btn" data-floor="1">Piso 1</button>
+      <button type="button" class="segmented-btn" data-floor="2">Piso 2</button>
+      <button type="button" class="segmented-btn" data-floor="3">Piso 3</button>
+      <button type="button" class="segmented-btn" data-floor="4">Piso 4</button>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-room-btn">
+      <span data-ref="plus-icon"></span>
+      <span>Nueva habitación</span>
+    </button>
+  </div>
+  <div class="rooms-grid" data-ref="grid"></div>
+</div>
+
+<template data-tpl="card-habitacion">
+  <div class="card card-pad stack-sm">
+    <div class="row-between">
+      <span class="font-mono text-lg font-bold text-navy" data-ref="number"></span>
+      <button type="button" class="btn btn-outline btn-xs hidden" title="Editar habitación" data-ref="edit-btn"></button>
+    </div>
+    <div class="text-xs font-medium text-slate-700" data-ref="meta"></div>
+    <div class="font-mono text-sm font-semibold text-teal" data-ref="rate"></div>
+    <div class="stack-xs pt-2 border-t-soft">
+      <div class="row-between text-11">
+        <span class="text-slate-500">Comercial:</span>
+        <span data-ref="commercial-status"></span>
+      </div>
+      <div class="row-between text-11">
+        <span class="text-slate-500">Físico (M2):</span>
+        <span data-ref="hk-status"></span>
+      </div>
+    </div>
+  </div>
+</template>

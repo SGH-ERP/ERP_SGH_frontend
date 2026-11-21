@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title" data-ref="title"></h2>
+      <p class="card-subtitle">Sincronizadas con Check-outs del Módulo 01 (Flujo B)</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="plus-icon"></span>
+      <span>Nueva orden</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Hab.</th>
+          <th>Tipo / Prioridad</th>
+          <th>Responsable</th>
+          <th>Origen</th>
+          <th>Estado</th>
+          <th class="text-right">Avance</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-limpieza">
+  <tr>
+    <td class="font-mono font-bold text-navy" data-ref="room"></td>
+    <td>
+      <div class="font-medium text-navy" data-ref="type"></div>
+      <div class="text-11 text-slate-500" data-ref="priority"></div>
+    </td>
+    <td data-ref="staff"></td>
+    <td class="text-11 text-slate-500" data-ref="origin"></td>
+    <td data-ref="status"></td>
+    <td class="text-right">
+      <div class="row-wrap justify-end hidden" data-ref="actions">
+        <button type="button" class="btn btn-outline btn-xs hidden" data-ref="start-btn">Iniciar</button>
+        <button type="button" class="btn btn-teal btn-xs hidden" data-ref="finish-btn">Finalizar limpieza</button>
+      </div>
+    </td>
+  </tr>
+</template>

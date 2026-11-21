@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Encuestas de Satisfacción y NPS</h2>
+      <p class="card-subtitle" data-ref="avg-subtitle"></p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="new-icon"></span>
+      <span>Registrar encuesta</span>
+    </button>
+  </div>
+  <div class="divide-list" data-ref="list"></div>
+</div>
+
+<template data-tpl="fila-encuesta">
+  <div class="p-4 row-between">
+    <div>
+      <div class="text-xs font-bold text-navy" data-ref="title"></div>
+      <p class="text-xs text-slate-600 mt-0.5" data-ref="comment"></p>
+    </div>
+    <div class="text-right font-mono">
+      <div class="text-sm font-bold text-teal" data-ref="score"></div>
+      <div class="text-11 text-slate-500" data-ref="nps"></div>
+    </div>
+  </div>
+</template>

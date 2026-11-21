@@ -1,0 +1,71 @@
+<div class="split-layout-3">
+  <div class="card card-pad stack-sm">
+    <div data-ref="search-slot"></div>
+    <div class="divide-list" data-ref="folios-list"></div>
+  </div>
+  <div data-ref="detail-slot"></div>
+</div>
+
+<template data-tpl="item-folio-lista">
+  <button type="button" class="w-full text-left p-3" style="width: 100%; text-align: left; cursor: pointer;">
+    <div class="row-between">
+      <span class="font-mono text-xs font-bold text-navy" data-ref="code-room"></span>
+      <div data-ref="status"></div>
+    </div>
+    <div class="text-xs font-medium text-slate-700 mt-0.5" data-ref="guest"></div>
+    <div class="row-between text-11 font-mono mt-1">
+      <span class="text-slate-500" data-ref="total"></span>
+      <span class="font-bold" data-ref="balance"></span>
+    </div>
+  </button>
+</template>
+
+<template data-tpl="detalle-folio">
+  <div class="card card-pad stack-md">
+    <div class="row-between border-b pb-3">
+      <div>
+        <div class="font-mono text-xs text-teal font-semibold" data-ref="code-room"></div>
+        <h2 class="text-lg font-bold text-navy" data-ref="guest"></h2>
+        <div class="text-11 text-slate-500" data-ref="opened-at"></div>
+      </div>
+      <div class="row-wrap">
+        <button type="button" class="btn btn-outline btn-sm hidden" data-ref="charge-btn">
+          <span data-ref="charge-icon"></span>
+          <span>Cargo manual</span>
+        </button>
+        <button type="button" class="btn btn-teal btn-sm hidden" data-ref="collect-btn">Cobrar saldo</button>
+      </div>
+    </div>
+
+    <div class="grid-3" data-ref="kpis"></div>
+
+    <div>
+      <h3 class="text-xs font-bold text-navy mb-2">Detalle de Cargos (Alojamiento M1 + POS M3 + Manual M4)</h3>
+      <div class="table-scroll">
+        <table class="erp-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Origen</th>
+              <th>Descripción</th>
+              <th class="text-right">Importe</th>
+            </tr>
+          </thead>
+          <tbody data-ref="charges-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template data-tpl="fila-cargo-folio">
+  <tr>
+    <td class="font-mono text-11 text-slate-500" data-ref="date"></td>
+    <td class="font-mono text-teal font-semibold" data-ref="source"></td>
+    <td>
+      <span data-ref="desc"></span>
+      <span class="text-11 font-mono text-slate-400 ml-1.5 hidden" data-ref="ref-code"></span>
+    </td>
+    <td class="text-right font-mono font-semibold" data-ref="amount"></td>
+  </tr>
+</template>

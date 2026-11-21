@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Servicios Complementarios (Spa, Lavandería, Traslados)</h2>
+      <p class="card-subtitle">Tarifario oficial para venta directa o cargo a habitación</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="new-icon"></span>
+      <span>Nuevo servicio</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Servicio</th>
+          <th>Área</th>
+          <th>Unidad / Duración</th>
+          <th class="text-right">Tarifa</th>
+          <th>Estado</th>
+          <th class="text-right">Acción</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-servicio-comp">
+  <tr>
+    <td class="font-semibold text-navy" data-ref="name"></td>
+    <td data-ref="area"></td>
+    <td class="font-mono text-slate-600" data-ref="duration"></td>
+    <td class="text-right font-mono font-semibold text-teal" data-ref="price"></td>
+    <td data-ref="status"></td>
+    <td class="text-right">
+      <button type="button" class="btn btn-outline btn-xs hidden" data-ref="edit-btn">Editar</button>
+    </td>
+  </tr>
+</template>

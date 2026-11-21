@@ -1,0 +1,74 @@
+:root {
+  /* Fonts */
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Brand & Neutrals (60-30-10) */
+  --navy-950: #071426;
+  --navy-900: #0B1F3A;
+  --navy-800: #132B4C;
+  --navy-700: #1D3E6B;
+  --navy-100: #E6EDF6;
+
+  --teal-700: #0F766E;
+  --teal-600: #0D9488;
+  --teal-500: #14B8A6;
+  --teal-300: #5EEAD4;
+  --teal-50: #F0FDFA;
+
+  /* Semantic Status Colors */
+  --success-700: #047857;
+  --success-600: #059669;
+  --success-50: #ECFDF5;
+  --success-200: #A7F3D0;
+
+  --warning-800: #92400E;
+  --warning-700: #B45309;
+  --warning-600: #D97706;
+  --warning-50: #FFFBEB;
+  --warning-200: #FDE68A;
+
+  --danger-800: #991B1B;
+  --danger-700: #B91C1C;
+  --danger-600: #DC2626;
+  --danger-50: #FEF2F2;
+  --danger-200: #FECACA;
+
+  --info-700: #0369A1;
+  --info-50: #F0F9FF;
+  --info-200: #BAE6FD;
+
+  /* Surfaces & Hairlines */
+  --surface: #FFFFFF;
+  --surface-subtle: #F8FAFC;
+  --canvas: #F4F6F9;
+  --hairline: #E2E8F0;
+  --hairline-soft: #F1F5F9;
+
+  /* Slate Typography */
+  --slate-900: #0F172A;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748B;
+  --slate-400: #94A3B8;
+  --slate-300: #CBD5E1;
+  --slate-200: #E2E8F0;
+  --slate-100: #F1F5F9;
+
+  /* Spacing & Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Elevation (max 1 level on overlays/modals) */
+  --shadow-card: 0 1px 2px rgba(11, 31, 58, 0.04);
+  --shadow-popover: 0 12px 32px -8px rgba(11, 31, 58, 0.16), 0 2px 6px rgba(11, 31, 58, 0.06);
+  --shadow-login: 0 1px 3px rgba(11, 31, 58, 0.04), 0 14px 34px -14px rgba(11, 31, 58, 0.08);
+  --shadow-modal: 0 20px 50px -12px rgba(7, 20, 38, 0.28);
+
+  --sidebar-width: 264px;
+  --topbar-height: 56px;
+}

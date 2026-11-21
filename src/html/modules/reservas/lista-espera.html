@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Gestión de Sobreventa y Lista de Espera</h2>
+      <p class="card-subtitle">Solicitudes en espera o conflictos de fechas pendientes de resolución autorizada</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-waitlist-btn">
+      <span data-ref="plus-icon"></span>
+      <span>Agregar a espera</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Huésped / Contacto</th>
+          <th>Tipo Hab.</th>
+          <th>Fechas</th>
+          <th>Motivo</th>
+          <th>Estado</th>
+          <th class="text-right">Resolución</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-espera">
+  <tr>
+    <td>
+      <div class="font-semibold text-navy" data-ref="guest"></div>
+      <div class="text-11 text-slate-500" data-ref="contact"></div>
+    </td>
+    <td data-ref="room-type"></td>
+    <td class="font-mono text-slate-600" data-ref="dates"></td>
+    <td data-ref="conflict"></td>
+    <td data-ref="status"></td>
+    <td class="text-right" data-ref="resolution"></td>
+  </tr>
+</template>

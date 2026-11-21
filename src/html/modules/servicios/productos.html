@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Catálogo de Productos y Carta POS</h2>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="new-icon"></span>
+      <span>Nuevo producto</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Producto</th>
+          <th>Categoría</th>
+          <th class="text-right">Precio</th>
+          <th class="text-right">Costo</th>
+          <th class="text-right">Stock</th>
+          <th class="text-right">Acción</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-producto">
+  <tr>
+    <td class="font-mono font-semibold text-navy" data-ref="code"></td>
+    <td class="font-medium text-navy" data-ref="name"></td>
+    <td data-ref="category"></td>
+    <td class="text-right font-mono font-semibold" data-ref="price"></td>
+    <td class="text-right font-mono text-slate-500" data-ref="cost"></td>
+    <td class="text-right font-mono" data-ref="stock"></td>
+    <td class="text-right">
+      <button type="button" class="btn btn-outline btn-xs hidden" data-ref="edit-btn">Editar</button>
+    </td>
+  </tr>
+</template>

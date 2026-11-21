@@ -1,0 +1,103 @@
+<div class="stack-md">
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h2 class="card-title">Requisiciones Internas desde Housekeeping / Áreas (Flujo D)</h2>
+        <p class="card-subtitle">Atiende solicitudes con salida de almacén o genera compra si no hay stock</p>
+      </div>
+    </div>
+    <div class="divide-list" data-ref="req-list"></div>
+  </div>
+
+  <div class="card card-pad stack-md">
+    <div class="row-between">
+      <div>
+        <h2 class="card-title">Inventario Central de Almacén (Kardex)</h2>
+        <p class="card-subtitle">Control de lotes, vencimientos y alertas de reposición</p>
+      </div>
+      <div class="row-wrap">
+        <div data-ref="search-slot"></div>
+        <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-item-btn">
+          <span data-ref="new-item-icon"></span>
+          <span>Nuevo insumo</span>
+        </button>
+      </div>
+    </div>
+    <div class="table-scroll">
+      <table class="erp-table">
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Insumo</th>
+            <th>Categoría / Lote</th>
+            <th class="text-right">Stock</th>
+            <th class="text-right">Mínimo</th>
+            <th>Estado</th>
+            <th class="text-right">Kardex</th>
+          </tr>
+        </thead>
+        <tbody data-ref="inv-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Últimos Movimientos de Kardex</h2>
+    </div>
+    <div class="divide-list" data-ref="kardex-list"></div>
+  </div>
+</div>
+
+<template data-tpl="fila-requisicion">
+  <div class="p-4 row-between">
+    <div>
+      <div class="text-xs font-bold text-navy" data-ref="title"></div>
+      <div class="text-11 text-slate-500" data-ref="meta"></div>
+    </div>
+    <div class="row-wrap">
+      <div data-ref="status"></div>
+      <button type="button" class="btn btn-teal btn-xs hidden" data-ref="dispatch-btn">
+        <span data-ref="dispatch-icon"></span>
+        <span>Despachar</span>
+      </button>
+      <button type="button" class="btn btn-outline btn-xs hidden" data-ref="purchase-btn">Generar Compra</button>
+    </div>
+  </div>
+</template>
+
+<template data-tpl="fila-inventario">
+  <tr>
+    <td class="font-mono text-11 text-slate-600" data-ref="sku"></td>
+    <td>
+      <div class="font-semibold text-navy" data-ref="name"></div>
+      <div class="text-11 text-slate-500" data-ref="location"></div>
+    </td>
+    <td>
+      <div class="text-xs" data-ref="category"></div>
+      <div class="text-11 font-mono text-slate-400" data-ref="batch"></div>
+    </td>
+    <td class="text-right font-mono font-bold" data-ref="stock"></td>
+    <td class="text-right font-mono text-slate-500" data-ref="min-stock"></td>
+    <td data-ref="status"></td>
+    <td class="text-right">
+      <button type="button" class="btn btn-outline btn-xs hidden" data-ref="adjust-btn">
+        <span data-ref="adjust-icon"></span>
+        <span>Ajustar</span>
+      </button>
+    </td>
+  </tr>
+</template>
+
+<template data-tpl="fila-kardex">
+  <div class="p-3 row-between text-xs">
+    <div>
+      <strong class="text-navy" data-ref="title"></strong>
+      <div class="text-11 text-slate-500" data-ref="meta"></div>
+    </div>
+    <div class="text-right font-mono">
+      <span class="font-bold" data-ref="qty"></span>
+      <div class="text-11 text-slate-400" data-ref="date"></div>
+    </div>
+  </div>
+</template>

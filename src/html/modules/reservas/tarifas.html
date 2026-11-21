@@ -1,0 +1,53 @@
+<div class="stack-md">
+  <div class="card card-pad bg-teal-soft row-between hidden" data-ref="ai-rate-banner">
+    <div>
+      <div class="text-xs font-bold text-navy row-gap-sm">
+        <span data-ref="sparkles-icon"></span>
+        <span>Sugerencia IA de Tarifa Dinámica (Confirmación Humana)</span>
+      </div>
+      <p class="text-xs text-slate-600 mt-0.5">Alta demanda prevista en Suite Ocean (89% ocupación fin de semana). Tarifa sugerida: S/ 790 (+10%).</p>
+    </div>
+    <button type="button" class="btn btn-teal btn-sm" data-ref="apply-dynamic-btn">Aprobar y Aplicar S/ 790</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h2 class="card-title">Planes Tarifarios y Temporadas</h2>
+        <p class="card-subtitle">Control histórico de tarifas por categoría de habitación</p>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-rate-btn">
+        <span data-ref="plus-icon"></span>
+        <span>Nueva tarifa</span>
+      </button>
+    </div>
+    <div class="table-scroll">
+      <table class="erp-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Tipo Habitación</th>
+            <th>Temporada</th>
+            <th>Vigencia</th>
+            <th class="text-right">Tarifa</th>
+            <th>Estado</th>
+            <th class="text-right">Acción</th>
+          </tr>
+        </thead>
+        <tbody data-ref="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<template data-tpl="fila-tarifa">
+  <tr>
+    <td class="font-semibold text-navy" data-ref="name"></td>
+    <td data-ref="room-type"></td>
+    <td data-ref="season"></td>
+    <td class="font-mono text-slate-600" data-ref="dates"></td>
+    <td class="text-right font-mono font-semibold text-teal" data-ref="price"></td>
+    <td data-ref="status"></td>
+    <td class="text-right" data-ref="action"></td>
+  </tr>
+</template>

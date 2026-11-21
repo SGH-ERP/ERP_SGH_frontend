@@ -1,0 +1,22 @@
+<div class="stack-md" data-ref="list"></div>
+
+<template data-tpl="card-resena">
+  <div class="card card-pad stack-sm">
+    <div class="row-between">
+      <div>
+        <div class="text-xs font-bold text-navy" data-ref="author-channel"></div>
+        <div class="text-11 text-teal font-mono font-semibold" data-ref="rating"></div>
+      </div>
+      <div data-ref="sentiment"></div>
+    </div>
+    <p class="text-xs text-slate-700 leading-relaxed" data-ref="comment"></p>
+    <div class="p-3 bg-subtle rounded-md text-xs text-slate-700 hidden" data-ref="reply-box">
+      <strong class="text-navy">Respuesta oficial: </strong>
+      <span data-ref="reply-text"></span>
+    </div>
+    <div class="row-wrap pt-1 hidden" data-ref="reply-form">
+      <input class="input-control flex-1" placeholder="Redactar respuesta oficial del hotel..." data-ref="reply-input" />
+      <button type="button" class="btn btn-primary btn-sm" data-ref="reply-submit">Publicar respuesta</button>
+    </div>
+  </div>
+</template>

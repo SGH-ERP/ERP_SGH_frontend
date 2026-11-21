@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Cuentas por Cobrar Corporativas y Créditos</h2>
+      <p class="card-subtitle">Facturas corporativas y check-outs trasladados con autorización (Flujo F)</p>
+    </div>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Cliente / Empresa</th>
+          <th>Documento</th>
+          <th>Vencimiento</th>
+          <th class="text-right">Pendiente</th>
+          <th>Estado</th>
+          <th class="text-right">Cobranza</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-cxc">
+  <tr>
+    <td>
+      <div class="font-semibold text-navy" data-ref="client"></div>
+      <div class="text-11 text-slate-500" data-ref="note"></div>
+    </td>
+    <td class="font-mono" data-ref="doc"></td>
+    <td class="font-mono text-slate-600" data-ref="due"></td>
+    <td class="text-right font-mono font-bold text-danger" data-ref="pending"></td>
+    <td data-ref="status"></td>
+    <td class="text-right">
+      <button type="button" class="btn btn-teal btn-xs hidden" data-ref="pay-btn">Registrar Pago Total</button>
+      <span class="text-11 text-slate-400 hidden" data-ref="done-label"></span>
+    </td>
+  </tr>
+</template>

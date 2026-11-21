@@ -1,0 +1,53 @@
+<div class="card stack-md card-pad">
+  <div class="row-between">
+    <div class="flex-1 max-w-md" data-ref="search-slot"></div>
+    <div class="segmented" data-ref="status-filter">
+      <button type="button" class="segmented-btn" data-status="Todas">Todas</button>
+      <button type="button" class="segmented-btn" data-status="Confirmada">Confirmada</button>
+      <button type="button" class="segmented-btn" data-status="Check-in">Check-in</button>
+      <button type="button" class="segmented-btn" data-status="Check-out">Check-out</button>
+      <button type="button" class="segmented-btn" data-status="Cancelada">Cancelada</button>
+    </div>
+  </div>
+  <div class="table-scroll" data-ref="table-wrap"></div>
+</div>
+
+<template data-tpl="tabla-reservas">
+  <table class="erp-table">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Huésped</th>
+        <th>Hab.</th>
+        <th>Estancia</th>
+        <th>Canal</th>
+        <th class="text-right">Total</th>
+        <th>Estado</th>
+        <th class="text-right">Acciones</th>
+      </tr>
+    </thead>
+    <tbody data-ref="tbody"></tbody>
+  </table>
+</template>
+
+<template data-tpl="fila-reserva">
+  <tr>
+    <td class="font-mono font-semibold text-navy" data-ref="code"></td>
+    <td>
+      <div class="font-medium text-navy" data-ref="guest"></div>
+      <div class="text-11 text-slate-500" data-ref="pax"></div>
+    </td>
+    <td class="font-mono" data-ref="room"></td>
+    <td class="font-mono text-slate-600" data-ref="stay"></td>
+    <td data-ref="channel"></td>
+    <td class="text-right font-mono font-semibold" data-ref="total"></td>
+    <td data-ref="status"></td>
+    <td class="text-right">
+      <div class="row-wrap justify-end">
+        <button type="button" class="btn btn-outline btn-xs" title="Ver historial" data-ref="history-btn"></button>
+        <button type="button" class="btn btn-danger-outline btn-xs hidden" data-ref="cancel-btn">Cancelar</button>
+        <button type="button" class="btn btn-outline-muted btn-xs hidden" data-ref="noshow-btn">No-Show</button>
+      </div>
+    </td>
+  </tr>
+</template>

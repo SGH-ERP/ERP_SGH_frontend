@@ -1,0 +1,42 @@
+<div class="stack-md">
+  <div class="card card-pad bg-teal-soft row-between">
+    <div>
+      <div class="text-xs font-bold text-navy row-gap-sm">
+        <span data-ref="sparkles-icon"></span>
+        <span>Proyección IA de Reposición Semanal</span>
+      </div>
+      <p class="text-xs text-slate-600 mt-0.5" data-ref="ai-summary"></p>
+    </div>
+    <button type="button" class="btn btn-teal btn-sm hidden" data-ref="purchase-btn">Generar Compra</button>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Control de Consumos y Mermas por Área</h2>
+    </div>
+    <div class="table-scroll">
+      <table class="erp-table">
+        <thead>
+          <tr>
+            <th>Insumo</th>
+            <th>Stock Actual</th>
+            <th>Mínimo</th>
+            <th>Valor en Almacén</th>
+            <th>Riesgo Quiebre</th>
+          </tr>
+        </thead>
+        <tbody data-ref="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<template data-tpl="fila-consumo">
+  <tr>
+    <td class="font-semibold text-navy" data-ref="name"></td>
+    <td class="font-mono" data-ref="stock"></td>
+    <td class="font-mono text-slate-500" data-ref="min-stock"></td>
+    <td class="font-mono" data-ref="value"></td>
+    <td data-ref="risk"></td>
+  </tr>
+</template>

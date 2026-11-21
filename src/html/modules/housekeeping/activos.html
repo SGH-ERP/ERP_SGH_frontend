@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Inventario de Activos e Infraestructura</h2>
+      <p class="card-subtitle">Equipos críticos del hotel con seguimiento técnico</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="plus-icon"></span>
+      <span>Nuevo activo</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Activo</th>
+          <th>Ubicación</th>
+          <th>Compra</th>
+          <th>Estado</th>
+          <th class="text-right">Acción</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-activo">
+  <tr>
+    <td class="font-mono font-semibold text-navy" data-ref="code"></td>
+    <td>
+      <div class="font-medium text-navy" data-ref="name"></div>
+      <div class="text-11 text-slate-500" data-ref="category"></div>
+    </td>
+    <td data-ref="location"></td>
+    <td class="font-mono text-slate-600" data-ref="date"></td>
+    <td data-ref="status"></td>
+    <td class="text-right" data-ref="action"></td>
+  </tr>
+</template>

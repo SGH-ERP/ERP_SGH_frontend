@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Insumos de Housekeeping y Solicitud a Almacén (Flujo D)</h2>
+      <p class="card-subtitle">Stock operativo de piso vinculado con el Almacén Central en Módulo 03</p>
+    </div>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Insumo</th>
+          <th class="text-right">Stock Piso</th>
+          <th class="text-right">Mínimo</th>
+          <th>Estado</th>
+          <th class="text-right">Operación</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-insumo">
+  <tr>
+    <td class="font-semibold text-navy">
+      <span data-ref="name"></span>
+      <span class="text-11 text-slate-400 ml-1.5" data-ref="unit"></span>
+    </td>
+    <td class="text-right font-mono font-bold" data-ref="stock"></td>
+    <td class="text-right font-mono text-slate-500" data-ref="min-stock"></td>
+    <td data-ref="status"></td>
+    <td class="text-right">
+      <div class="row-wrap justify-end hidden" data-ref="actions">
+        <button type="button" class="btn btn-outline btn-xs" data-ref="consume-btn">-1 Consumo</button>
+        <button type="button" class="btn btn-teal btn-xs" data-ref="req-btn">
+          <span data-ref="pkg-icon"></span>
+          <span>Pedir a Almacén</span>
+        </button>
+      </div>
+    </td>
+  </tr>
+</template>

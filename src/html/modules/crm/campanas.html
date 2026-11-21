@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Campañas de Marketing y Fidelización</h2>
+      <p class="card-subtitle">Filtrado estricto de consentimiento comercial vigente</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="new-icon"></span>
+      <span>Nueva campaña</span>
+    </button>
+  </div>
+  <div class="divide-list" data-ref="list"></div>
+</div>
+
+<template data-tpl="fila-campana">
+  <div class="p-4 row-between">
+    <div>
+      <div class="text-xs font-bold text-navy" data-ref="title"></div>
+      <div class="text-11 text-slate-500 mt-0.5" data-ref="meta"></div>
+    </div>
+    <div class="row-gap-sm">
+      <div data-ref="status"></div>
+      <button type="button" class="btn btn-outline btn-xs hidden" data-ref="toggle-btn"></button>
+    </div>
+  </div>
+</template>

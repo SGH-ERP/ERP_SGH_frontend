@@ -1,0 +1,101 @@
+<div class="stack-md">
+  <div class="alert alert-info">
+    <span data-ref="info-icon"></span>
+    <span><strong>Flujo C:</strong> Los consumos con "Cargo a Habitación" validan que el huésped tenga Folio abierto y cargan el importe automáticamente en Finanzas (M04), descontando stock de recetas/productos.</span>
+  </div>
+
+  <div class="pos-layout">
+    <div class="card card-pad stack-md">
+      <div class="segmented" data-ref="categories">
+        <button type="button" class="segmented-btn" data-cat="Todos">Todos</button>
+        <button type="button" class="segmented-btn" data-cat="Alimentos">Alimentos</button>
+        <button type="button" class="segmented-btn" data-cat="Bebidas">Bebidas</button>
+        <button type="button" class="segmented-btn" data-cat="Minibar">Minibar</button>
+        <button type="button" class="segmented-btn" data-cat="Spa / Bienestar">Spa / Bienestar</button>
+        <button type="button" class="segmented-btn" data-cat="Eventos / Otros">Eventos / Otros</button>
+      </div>
+      <div class="grid-2" data-ref="products-grid"></div>
+    </div>
+
+    <div class="card card-pad stack-md">
+      <h3 class="card-title row-gap-sm">
+        <span data-ref="cart-icon"></span>
+        <span>Comanda Activa POS</span>
+      </h3>
+
+      <div class="grid-2">
+        <div>
+          <label class="field-label">Origen</label>
+          <select class="select-control text-xs" data-ref="origin">
+            <option value="Restaurante">Restaurante</option>
+            <option value="Room Service">Room Service</option>
+            <option value="Bar">Bar</option>
+            <option value="Minibar">Minibar</option>
+            <option value="Spa">Spa</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Pago</label>
+          <select class="select-control text-xs" data-ref="payment-mode">
+            <option value="Cargo a Habitación">Cargo a Habitación</option>
+            <option value="Pago Directo (Tarjeta)">Pago Directo (Tarjeta)</option>
+            <option value="Pago Directo (Efectivo)">Pago Directo (Efectivo)</option>
+          </select>
+        </div>
+      </div>
+
+      <div data-ref="table-wrap">
+        <label class="field-label">Mesa</label>
+        <select class="select-control text-xs" data-ref="table-select"></select>
+      </div>
+
+      <div data-ref="folio-wrap">
+        <label class="field-label">Folio / Habitación destino (Flujo C)</label>
+        <select class="select-control text-xs" data-ref="folio-select"></select>
+      </div>
+
+      <div class="divide-list border rounded-md" data-ref="cart-list"></div>
+
+      <div class="row-between pt-2 border-t">
+        <span class="text-xs font-semibold text-slate-600">Total comanda</span>
+        <span class="font-mono text-lg font-bold text-navy" data-ref="cart-total"></span>
+      </div>
+
+      <button type="button" class="btn btn-teal w-full hidden" data-ref="submit-btn">
+        <span data-ref="submit-icon"></span>
+        <span data-ref="submit-label">Confirmar</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<template data-tpl="pos-producto-btn">
+  <button type="button" class="stat-tile is-clickable">
+    <div class="row-between">
+      <span class="text-xs font-semibold text-navy" data-ref="name"></span>
+      <span class="font-mono text-xs font-bold text-teal" data-ref="price"></span>
+    </div>
+    <div class="text-11 text-slate-500 mt-1" data-ref="meta"></div>
+  </button>
+</template>
+
+<template data-tpl="pos-carrito-vacio">
+  <div class="p-4 text-xs text-slate-500 text-center">
+    Selecciona productos del catálogo izquierdo para armar la comanda.
+  </div>
+</template>
+
+<template data-tpl="pos-carrito-item">
+  <div class="p-2.5 row-between text-xs">
+    <div class="min-w-0 flex-1">
+      <div class="font-medium text-navy truncate" data-ref="name"></div>
+      <div class="font-mono text-11 text-slate-500" data-ref="unit-price"></div>
+    </div>
+    <div class="row-gap-sm shrink-0">
+      <button type="button" class="btn btn-outline btn-xs" data-ref="dec-btn"></button>
+      <span class="font-mono font-semibold" data-ref="qty"></span>
+      <button type="button" class="btn btn-outline btn-xs" data-ref="inc-btn"></button>
+      <span class="font-mono font-bold text-navy" data-ref="subtotal"></span>
+    </div>
+  </div>
+</template>

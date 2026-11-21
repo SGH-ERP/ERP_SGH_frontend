@@ -1,0 +1,63 @@
+<div class="stack-md">
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h2 class="card-title">Órdenes de Compra</h2>
+        <p class="card-subtitle">Al marcar Recibida se actualiza Almacén y se registra el egreso en Finanzas (M4)</p>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-po-btn">
+        <span data-ref="new-po-icon"></span>
+        <span>Nueva Orden Compra</span>
+      </button>
+    </div>
+    <div class="divide-list" data-ref="po-list"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Directorio de Proveedores Homologados</h2>
+      <button type="button" class="btn btn-outline btn-sm hidden" data-ref="new-sup-btn">
+        <span data-ref="new-sup-icon"></span>
+        <span>Nuevo proveedor</span>
+      </button>
+    </div>
+    <div class="table-scroll">
+      <table class="erp-table">
+        <thead>
+          <tr>
+            <th>Razón Social</th>
+            <th>RUC</th>
+            <th>Rubro</th>
+            <th>Contacto</th>
+            <th class="text-right">Lead Time</th>
+          </tr>
+        </thead>
+        <tbody data-ref="sup-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<template data-tpl="fila-orden-compra">
+  <div class="p-4 row-between">
+    <div>
+      <div class="text-xs font-bold text-navy" data-ref="title"></div>
+      <div class="text-11 text-slate-500 mt-0.5" data-ref="items"></div>
+    </div>
+    <div class="row-gap-sm">
+      <span class="font-mono font-bold text-navy" data-ref="total"></span>
+      <div data-ref="status"></div>
+      <button type="button" class="btn btn-teal btn-xs hidden" data-ref="receive-btn">Recepcionar Mercadería</button>
+    </div>
+  </div>
+</template>
+
+<template data-tpl="fila-proveedor">
+  <tr>
+    <td class="font-semibold text-navy" data-ref="name"></td>
+    <td class="font-mono text-slate-600" data-ref="ruc"></td>
+    <td data-ref="category"></td>
+    <td class="text-11" data-ref="contact"></td>
+    <td class="text-right font-mono" data-ref="lead-time"></td>
+  </tr>
+</template>

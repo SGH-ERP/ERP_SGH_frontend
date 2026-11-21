@@ -1,0 +1,28 @@
+<div class="stack-md">
+  <div class="segmented" data-ref="filters">
+    <button type="button" class="segmented-btn" data-filter="Todas">Todas</button>
+    <button type="button" class="segmented-btn" data-filter="Sucia">Sucia</button>
+    <button type="button" class="segmented-btn" data-filter="En limpieza">En limpieza</button>
+    <button type="button" class="segmented-btn" data-filter="Limpia">Limpia</button>
+    <button type="button" class="segmented-btn" data-filter="Inspeccionada">Inspeccionada</button>
+    <button type="button" class="segmented-btn" data-filter="Fuera de servicio">Fuera de servicio</button>
+  </div>
+  <div class="rooms-grid" data-ref="grid"></div>
+</div>
+
+<template data-tpl="card-estado-hab">
+  <div class="card card-pad stack-sm">
+    <div class="row-between">
+      <span class="font-mono text-lg font-bold text-navy" data-ref="number"></span>
+      <span data-ref="status"></span>
+    </div>
+    <div class="text-xs text-slate-600" data-ref="meta"></div>
+    <select class="select-control text-xs hidden" data-ref="hk-select">
+      <option value="Sucia">Sucia</option>
+      <option value="En limpieza">En limpieza</option>
+      <option value="Limpia">Limpia</option>
+      <option value="Inspeccionada">Inspeccionada</option>
+      <option value="Fuera de servicio">Fuera de servicio</option>
+    </select>
+  </div>
+</template>

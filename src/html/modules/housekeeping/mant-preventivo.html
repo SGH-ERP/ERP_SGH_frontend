@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2 class="card-title">Plan de Mantenimiento Preventivo</h2>
+      <p class="card-subtitle">Revisiones periódicas programadas sobre activos críticos</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm hidden" data-ref="new-btn">
+      <span data-ref="plus-icon"></span>
+      <span>Programar revisión</span>
+    </button>
+  </div>
+  <div class="table-scroll">
+    <table class="erp-table">
+      <thead>
+        <tr>
+          <th>Activo</th>
+          <th>Frecuencia</th>
+          <th>Próxima Fecha</th>
+          <th>Checklist</th>
+          <th>Estado</th>
+          <th class="text-right">Acción</th>
+        </tr>
+      </thead>
+      <tbody data-ref="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<template data-tpl="fila-preventivo">
+  <tr>
+    <td class="font-semibold text-navy" data-ref="asset"></td>
+    <td data-ref="frequency"></td>
+    <td class="font-mono text-slate-600" data-ref="date"></td>
+    <td class="text-xs text-slate-600" data-ref="checklist"></td>
+    <td data-ref="status"></td>
+    <td class="text-right" data-ref="action"></td>
+  </tr>
+</template>
